@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+ 
+</head>
+
+<body>
+
+    <h2>
+        Many People seems to misunderstand physics and thats why this site is dedicated to cute explanation of several concepts of physics
+    </h2>
+    <p> To me what physics hold is a special place in my own mind, and body and i want you to experience the same, how small things which we take granted for 
+        works, how applicances and everything works, this is the place to know it all.
+    </p>
+    <img src="D1.png" alt="3D cube made of triangles" width="500">
+
+    <p>So now i would like to ask you, how does a simple lightbulb works..</p>
+    <div class ="poll">
+        <h4>How does a lightbulb works?</h4>
+        <button onclick = "vote('idea')">Yup I have an idea </button>
+        <button onclick = "vote('noidea')">Ahmm i don't know? how? </button>
+        <p id="idea-result"></p>
+        <p id="noidea-result"></p>
+
+    </div>
+<div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="bulb.html">How does a lightbulb light</a>
+</div>
+<script>
+    let votes = {idea :0, noidea:0}
+    function vote(choice) {
+    votes[choice]++
+    let total = votes.idea + votes.noidea
+    let ideaPct = Math.round((votes.idea / total) * 100)
+    let noideaPct = Math.round((votes.noidea / total) * 100)
+
+    document.getElementById('idea-result').innerText = 
+      'Yup I know ' + ideaPct + '%'
+    document.getElementById('noidea-result').innerText = 
+      'I dont know, but i want to know ' + noideaPct + '%'
+  }
+
+</script>
+    
+</body>
+</html>

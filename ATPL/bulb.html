@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+ 
+</head>
+
+<body>
+    <div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game </a>
+    <a href="bulb.html">How does a lightbulb light</a>
+</div>
+    <h1> A light bulb</h1>
+    <p>A light bulb as you have seen in your home is a device that works on the principle of energy</p>
+    <img src="D2.png" alt="3D cube made of triangles" width="500">
+    <p> Ahmm you may see by my skill issued diagram, that this is just a simple circuit showing what a light buld is 
+        Now if we see in detail, lemme zoom here
+    </p>
+    <img src="D3.png" alt="3D cube made of triangles" width="500">
+    <p>Usually in a conductor (which the bulb is made), we see there are free electrons and also some lattice positive charge strucutre, and when the buld is off, or there is nothing some sort of external factor
+        disturbing it, the electrons move random in any direction hence, its so randome we can't model it 
+    </p>
+
+    <h4>Let me show you whats actually going on </h4>
+
+    <div id="electronsmovin">
+        <script src="bulbanimation.js"></script>
+    </div>
+<div class = "explanation">
+    <p>This is a randomly moving electron, now imagine its in the whole conductor i shown you above wouldn't it be chaotic</p>
+    <p>
+        Now lets work up upon our definitions
+    </p>
+
+    <h3>What is a current</h3>
+    <p>Since we defined Current to be rate of a charge per unit time thorugh a cross sectional area, thats current (where the charge conventially is taken positive)</p>
+    <p> Now since you would be wondering if an electron moves randomly like this in a conductor why doesn't the current produce due to its movement</p>
+
+    <h2>A good question</h2>
+    <p> That is genuinely a good question, usually we think it should produce a cuurent, but it wouldn't becuase</p>
+    <img src="D4.png" alt="3D cube made of triangles" width="500">
+    <p> Cause if we randomly pick any cross section area, the motion is so random, that the chrages going though a surface cancels each 
+        other out and net current produced = 0
+    </p>
+
+    <h2> But what if we could make each electron march into some area, that would produce a current?</h2>
+    <p> Yup the answer is Yes, it would and hence thats what an electric field does, it fixate the direction of electrons moving which fixate the direction of current </p>
+    <img src="D5.png" alt="3D cube made of triangles" width="500">
+    <p> Now imagine you are being collided to a lattice, since you have huge amount of kinetic energy due to the field, you transfer it to the stationalry lattice which then 
+        vibrates over the period producing heat, and then due to that heat the bulb glows
+    </p>
+    </div>
+    <div id = "electronsmovinbulk">
+        <script src="bulbanimationbulk.js"></script>
+    </div>
+<div class = "explanation">
+    <p> now due to the energy produced we could see that we get our heat bulb and then it get converts to light, but the main question is who made the electric field happened</p>
+    <h3>Where majority fails</h3>
+    <p>many people think its the battery which causes these electric field but the answer is suprisings</p>
+    <h2>But first, why is the battery the wrong answer?</h2>
+    <p>Battery is the wrong answer becuase, lets get you with a thought experiement, if we move the circuit closer to the the battrery, the elcectric field should be increased, since its inversly sqaure dependent on the distance, so the electrons
+        should have a greater kinetic energy meaning, that the electrons should disspapte energy more into the lattice structre making more glowing of bulb?? But is it actually ture or does it actually happens?
+    </p>
+<img src="D6.png" alt="3D cube made of triangles" width="500">
+<p>So if thats not the case, then how does the electron experience field and how does the bulb glow then??</p>
+<p> The answer is preety cool, So usually the electrons experience field from the circuit itself!!!</p>
+<h2>But HOWW????</h2>
+<p>Since the battery makes the potential difference around the circuit inducing charges so it looks something like this:</p>
+<img src="D7.png" alt="3D cube made of triangles" width="500">
+<p> so due to these induced charges, the electric field gets produced which make the bulb glow !!</p>
+</div>
+
+</body>

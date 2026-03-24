@@ -1,0 +1,49 @@
+ @font-face {
+      font-family: 'Geist';
+      src: url('Geist-Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+    }
+
+
+    body {
+      font-family: 'Geist', Arial, sans-serif;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fffdd0;
+      color: #1a3a6b;
+    }
+    
+
+    h1 {
+      color: #0d2b55;
+    }
+
+   
+
+.sidebar{
+    position:fixed;
+    left: 0;
+    top: 0;
+    height : 100%;
+    width: 200px;
+    background-color: #fffcbe;
+    padding : 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.sidebar a{
+    color: #dedb9f;
+    text-decoration: none;
+    font-family: 'Geist', Aerial, sans-serif;
+    font-size: 18px;
+}
+
+.sidebar a:hover{
+    color:#888;
+}
