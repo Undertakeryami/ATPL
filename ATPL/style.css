@@ -16,7 +16,9 @@
       color: #1a3a6b;
     }
     
-
+.main-content {
+    margin-left: 220px;
+}
     h1 {
       color: #0d2b55;
     }
