@@ -11,8 +11,9 @@
 </head>
 
 <body>
+   <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
   
-       <div class = "sidebar">
+    <div class = "sidebar">
     <h3>Pages to wonder</h3>
     <a href="index.html">The Main game </a>
     <a href="bulbfixed.html">How does a lightbulb light</a>
@@ -20,14 +21,15 @@
     <a href="cartroll.html">CartRoll</a>
     <a href="microwave.html">Microwave</a>
 </div>
+
 <div class ="content">
-    <h1> Pressure coooookkeerrr!!</h1>
+    
+     <h1> Pressure coooookkeerrr!!</h1>
      <img src="D8.png" alt="3D cube made of triangles" width="500">
      <h3>How does a pressure cooker even work, and why do we need it excactly?</h3>
      <p>Pressure cookers are a miracle, without it people would have been cooking for hours
         Usually pressure cooker, as the name applies work on the principal of vapour pressure and Bioiling point definition.
      </p>
-
 
      <h2>What is vapour pressure and Boiling point</h2>
      <p>Hmm Definition of vapour pressure its a bit confusing but lemme tell,
@@ -85,6 +87,15 @@
 
      </div>
 </div>
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+  </script>
 
 
 </body>

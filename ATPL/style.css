@@ -38,9 +38,13 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    transition: transform 0.3s ease; 
+    z-index: 100;
 }
 
-
+.sidebar.hidden{
+    transform: translateX(-220px);
+}
 .sidebar a{
     color: #dedb9f;
     text-decoration: none;
@@ -48,6 +52,28 @@
     font-size: 18px;
 }
 
+
+
+
 .sidebar a:hover{
     color:#888;
+}
+
+/*This is the part where i deugged this section of code with AI the below part*/
+#sidebar-toggle {
+    position: fixed;
+    top: 10px;
+    left: 210px;
+    z-index: 200;
+    background: #fffcbe;
+    border: 1px solid #dedb9f;
+    color: #1a3a6b;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: 'Geist', Arial, sans-serif;
+    transition: left 0.3s ease;
+}
+#sidebar-toggle.hidden {
+    left: 0px;
 }

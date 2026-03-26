@@ -10,6 +10,7 @@
 </head>
 
 <body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
 
     <h2>
         Many People seems to misunderstand physics and thats why this site is dedicated to cute explanation of several concepts of physics
@@ -67,5 +68,15 @@
         why does certain food gets only hot inside but not outside?
         why does the water does get superboiled and do weird stuff?  </p>
 </div>
+
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+  </script>
 </body>
 </html>
