@@ -21,7 +21,7 @@ new p5(function(p){
         p.circle(x, cy, r * 2)
 
 
-        //drawing spokes so the usser could see the animation 
+        //drawing spokes so the usser could see the animation faah moment
 
 
         //looping is good,
@@ -49,7 +49,8 @@ new p5(function(p){
 let s = 2 //speed
     x = x+s
 
-    angle = a+(s/r)
+    angle = a+(s/r) // lol forgot i named it as a not angle
+    //but this became a feature tbh :D
     if (x > 650) x = 50}
 
 })
