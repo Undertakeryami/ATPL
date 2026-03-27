@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+ 
+</head>
+
+<body>
+    <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+    <div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game </a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+</div>
+<div class = "content">
+    <h1>Method to solve Current problems with ease</h1>
+    
+    <p>In this article you would learn to know about symmetry and solving Tough current problems :D</p>
+    <img src = "D19.png" width="500">
+</div>
+
+<div class = "content">
+  <h3>Why people fumble over complex circuits</h3>
+  <p>Usually people apply some well know laws such as Kirchoff's current law and kircoff's Voltage law of potential drop which are the fundamental 
+    theories for our results which we are gonna see
+
+  </p>
+  <h3>Kirchoff Current Law</h3>
+  <p>This law states that the net current thorugh a node is always 0</p>
+  <p>Let us by convention take the current coming to a node as positive and coming out of the node as negative
+    so as we can see in the figure the Net current must be 0 which implies i1 + i2 - i3 = 0
+  </p>
+
+  <img src="D20.png" width="500">
+
+  <h3>Kirchoff's Voltage law</h3>
+  <p>This states that the potential drop though any loop in a closed circuit is 0</p>
+  <img src="D21.png" width="500">
+
+  <p>As we can see here the potential drop though the circuit in this loop would be 0
+    which directly implies that i*R - V = 0
+    thorugh which we get our Ohm's law as V = iR
+  </p>
+  <p>Since these are the basis of our methods and very important to intutively understand this so i would recommned you to go though it by a khan's academy video
+    <a href src="https://www.youtube.com/watch?v=lsqIyTAGJnA">Kirchoff voltage law</a>
+  </p>
+</div>
+
+<div class = "container">
+  <h2>The cheesy stuff</h2>
+  <h3>Symmetry</h3>
+  <p>Here in this section we are gonna talk about symmetry and how we can reduce complex looking circuits into an easy one with symmetry and recursion</p>
+
+
+  <h3>Defined symmetry</h3>
+  <p>Symmetries in circuit could be defined as vertical symmetry, horizonatal symmetry and diagonal symmetry, someotimes we could solve problems with superpositions and recursion</p>
+ 
+  <p>Though in this article i won't go thorugh the proof of all these inference of these symmetries but i want to try you to make your own proff and you can sumbit at the discord channel :D</p>
+ <h3>Vertical symmtry</h3>
+ <p>Vertical symmetry is the symmetry where we can join the vertical line in the middle and both part would look reflection of each other </p>
+ <img src="D22.png" width="500">
+ <p>Here its a vertical symmetry of with resistor R across its lenghts</p>
+ <img src="D23.png" width="500">
+ <p>Here we could se we can make a vertical line hence this follows or comes under the vertical symmetric group of circuits</p>
+  <img src="D24.png" width="500">
+  <p>Though in a circuit where vertical symmetry is seen we can say that same current flows though the nodes lyin on the line of symmetry as it was going making these little resistors in series for example :D</p>
+  <img src="D25.png" width="500">
+  <p>And since no current flows in those two resitor so we could neglect those and solve 
+    Usually if you go try proving these results it could be easily done using the concept of biasness and Symmetry
+  </p>
+  <h4>Argument to prove this</h4>
+  <p>We could give a argument of non-biasness and fairness behaviour of a circit and symmetry to prove this vertical result which i would insist you to try in your own</p>
+  <h3>Horizontal symmetry</h3>
+  <p>This is indeed an intresting one since it could reduce to complex problems to an easy one</p>
+  <img src="D26.png" width="500">
+  <p>As we can see we could draw a horizontal symmetric line as follow</p>
+  <img src="D27.png" width="500">
+
+  <p>Now the thing in horizontal symmetry is that all these nodes, you are seeing here in the horizontal symmetry have the same potential :D</p>
+  <img src="D28.png" width="500">
+  <p>So now since these have same potential indicated as A, B, C, D, why not we superimpose that</p>
+  <p>And since the potentail between horzontally symetric resistors are equal hence they can be considered in parallel while we are folding it right? by the defintion of parralel combinatroions
+
+  </p>
+  <img src="D29.png" width="500">
+  <p>Then we can reduce it to... </p>
+  <img src="D30.png" width="500">
+
+
+  <p>See how it makes solving these problems so eassssysysyyssyys</p>
+  <h3>Problem time :D</h3>
+  <p>This is one problem which i want you to solve using the knowledge you have gained till here
+    try to solve this problem until you are satisfied</p>
+
+    <img src="D31.png" width="500">
+    <p>Here each edge represent a resitor of R so calculate the total resistance between A and B</p>
+    <p>Piss you could see here there are two symmetries being applied, Horizontal symmetry and vertical symmetry both, now you could think how to resolve this problem fully </p>
+  
+  
+    <h3>Diagonal symmetry</h3>
+    <p>Proving this result is stupidly easy but i still want you to try , you could use the concpet of potential drop using it you can prove</p>
+    <h4>Digonal symmetry</h4>
+    <
+  
+  </div>
+
+  
+
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+  </script>
+</body>
