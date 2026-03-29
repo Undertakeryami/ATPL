@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+ 
+</head>
+
+<body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+<div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+</div>
+
+
+<div class = "content">
+    <h1>OSMOSIS</h1>
+    <h3>What is osmosis????</h3>
+
+
+    <img src="D34.png" width="500">
+
+    <p>Usually what people think of osmosis is very weird idea, they think of something going out and flowing 
+        but thats half of what is actually happening and why you should know what is OSMOSIS.
+
+    </p>
+    <h3>Osmosis</h3>
+    <p>Its a fact or you could just say a good observation that things tend to go from High potential to low potential or From high to Low right
+        Now imagine two containers with liquide C1 and C2 , and imagine a special wall which i would tell you latr what it is 
+        But now for it just imagine these two walls. </p>
+
+        <img src="D35.png" width="500">
+        <p>
+    Now imagine C1 solution has more water 
+    than C2 solution, so if if and only if we make the wall to allow water molecules to pass, they would go from C1 to C2, right? cause from more water to low water and then,
+    it would flow until it has reached equilibrium. But now then you think, Does only water flows out of the membrane of does everything with minerals and solute flows?
+
+        </p>
+
+    <h3>Membranes</h3>
+    <p>So there are two types of membrane we are gonna look for now</p>
+    <h4>Perimable membrane</h4>
+    <p>These are the membranes which allow the molecules to pass even the solute and the solvent molecules to pass from itselfs, </p>
+    <img src="D36.png" width="500">
+    <p>As you can see the molecules of solvent(blue) and solute(orange) are both able to pass fluently but the thing is that, 
+        yup they are passing normally, so the solution would flow from C1 to C2 until their concentration as a whole becomes in equilibrium
+        So this phenomena is called diffusion
+
+    </p>
+
+    <h4>But what about semiiiii Permiableee membrane?</h4>
+    <p>SO yeah semi perimable membrane can be something like which only abllow the solvent to pass and go thorugh them , cuase the solvent is big enought to not pass from them 
+        so yeah, if the solvent (in the medium which it is dissolved only passes) then we say is as osmosis.
+    </p>
+
+    <img src="D38.png" width="500">
+
+
+    <p>So as we can see here the membrane is big enough to only let the solvent pass :D</p>
+    
+    <h3>Concept of osmosis</h3>
+    <p>Now lets talk about osmosis</p>
+    <p>Osmosis is just the phenomna where the solvent only passes and gets exchange
+        Now I have a question, let concentation be defined as [moles of solute/volume of solution], then 
+
+        If the solution C2 has higher concentration than C1 then where do you thinkg the interchange of solvent would occur?
+    </p>
+    <img src="D35.png" width="500">
+    <p>Its the same, cause since the concentration of C2 is greater than C1 then it means that The moles of solute are gretaer in C2 than of C1 so complentatry moles of 
+        solvent would be greater in C1 than of C2, hence the flow of solvent from high to low, then from C1 to C2
+    </p>
+
+    <p>So the higher the concentration of solute the less the concentration of the solvent</p>
+
+    <h3>Osmotic pressure</h3>
+    <p>This an important term to study</p>
+    <p>This means the excess pressure built due to the flow of solvent from one low concetration to high concentration liquides, this is usually 
+        dentoed as pi
+    </p>
+
+    <p>Imagine this, from C1 to C2 the liquid is flowing (the solvent)</p>
+    <img src="D39.png" width="500">
+    <p>Since due to osmosis some solvent flwe from C1 to C2 solution, then due to that extra pressure is generated where P is the earlier pressure, than that extra pressure of pi is the osmotic pressure.</p>
+
+
+    <h3>What is Reverse osmosis and another definition of osmotic pressure :D</h3>
+    <p>So we can define osmotic pressure as the amount of pressue we should apply at the reciver side so the osmosis doesn't occur, it means like to stop it :D</p>
+
+    <img src="D40.png" width="500">
+    <p>Now here the pressure applied pi is the osmotic pressure but what if we say that if we apply pressure grater than pi, then yup your intuion is right, the thing would go in reverse from Low to high solvent yup, from hight to low conceptration of solute :D1
+        this is also known as reverse osmosis
+    </p>
+
+    <p>Yup thats how your RO in your house which serves as a water fiter works you know :DDDDD</p>
+
+    <p>So in RO, what it does, like there is a filter which has pure water and then due to that the tap water is run, and then huge pressure is applied to it so the water flows from tap section to the pure water making it a reverse osmosis and purifiying our water
+        So yeah, but why its called reverse osmosis, becuase you know its actually reverse`
+    </p>
+    <p>Since, the water if it have would been in normal condition, it flows from low concetration of solute to high concentration means pure water should have flows to the tap but since we are applying pressure on tap, through semi permiable membrane, the water from tap water flows to the pure water making it clean :D
+        So now you could tell your parents that how this workds LD
+        
+    </p>
+</div>
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+  </script>
+
+</body>
+</html>
