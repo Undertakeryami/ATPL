@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+ 
+</head>
+
+<body2>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+   
+<div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <a href="index2.html">Math page :D</a>
+
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+  </script>
+</body2>
+</html>
