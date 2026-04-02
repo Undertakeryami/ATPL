@@ -6,10 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Page</title>
- 
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 </head>
 
-<body2>
+<body>
      <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
 
    
@@ -24,6 +27,64 @@
     <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
     <a href="index2.html">Math page :D</a>
 
+
+   </div>
+    <div class = "content">
+      <h1>Mathematics section</h1>
+      <p>As said, when you do physics you stubmle upon some mathematics, which helps you to write and express nature in 
+        equational forms :D
+      </p>
+    </div>
+    <img src="D41.png" width="500">
+    
+
+    <div class="content">
+      <h3>But brother, wasn't physics enough?</h3>
+      <p>Yeah it was but to truly understand phyiscs you need to truly get mathematics too :D</p>
+
+      <h3>The things </h3>
+      <p>A short notice for all, since here i am gonna do only this article for mathematics but it would be a big article :D
+        And also things would be very very random , so yeah just go cause you love maths 
+      </p>
+      <h3>Hajimemashite</h3>
+
+      <h3>1. Inequalitities through Calculus</h3>
+<p>Have you heard about the inequality \( \frac{a+b}{2} > \sqrt{ab} \)</p>
+<p>This is known As AM-GM inequlaity and the proof is pretty easy</p>
+\[(\sqrt{a}-\sqrt{b})^2>0\]
+\[(a+b-2\sqrt{ab})>0\]
+\[(a+b)/2 > \sqrt{ab}\]
+<p>See this was a very easy proof, but you know lemme give you something like this..</p>
+\[let\ f(x) = 2xtan^{-1}(x)-log(1+x^2)\]
+\[let\ g(x) = (ln(1+x))^{-1} - \frac{1}{x}\]
+<p>Then prove that:</p>
+\[g(f(cos(sinx))) < g(f(cos(cos(sinx))))\ \forall x \in (0, \frac{\pi}{2})\]
+
+<p>That is a strech, but i would tell you how to make and solve these questions as told by my teacher too</p>
+<p>Lets focus on this first.</p>
+\[\forall x \in (0, \frac{\pi}{2}), prove\ that\ \]
+\[cos(e^x) < cos(1+x+\frac{x^2}{2})\]
+<p>How do we prove this??</p>
+<h4>Backtracking</h4>
+<p>Lets think how this question is made in the first place</p>
+<p>Since we know that \(e^x\) is greater than 1 \( \forall x \in (0, \frac{\pi}{2})\) 
+  then we can integrate both sides and then we would get something like this.
+  (btw this result could be very easily proven too)
+</p>
+
+
+<img src="D42.png" width="500">
+<p>After integrating both sides we would get an inequaltiy we get something interesting
+  as you notice, in the graph that, if we integrate on both the sides from x = 0 to x = X, then we could get something like
+\(e^x - 1 > x\) and then we can write this as : </p>
+
+\[e^x > 1+x \]
+\[integrating \ both\ sides\ \]
+\[e^x > 1+x+\frac{x^2}{2}\]
+<p>Since cos is a decreasing function than what we can say</p>
+\[cos(e^x) < cos(1+x+\frac{x^2}{2})\]
+   
+</div>
      <script>
     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');
@@ -32,6 +93,8 @@
       btn.classList.toggle('hidden');
       btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
     }
+
+    
   </script>
-</body2>
+</body>
 </html>
