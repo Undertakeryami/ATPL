@@ -63,9 +63,41 @@
         <h3>Nested Loop</h3>
         <p>A nested loop is just a loop inside loop :D, you would be better understand when you see it lol</p>
    </div>
+
+   <div class = "loop-controls">
+ <label>Rows: <input type="range" min="2" max="10" value="5" id="ctrl-rows" oninput="updateRows(this.value)"> <span id="rows-val">5</span></label>
+    <label>Cols: <input type="range" min="2" max="10" value="5" id="ctrl-cols" oninput="updateCols(this.value)"> <span id="cols-val">5</span></label>
+    <label>Speed: <input type="range" min="1" max="60" value="20" id="ctrl-speed" oninput="updateSpeed(this.value)"> <span id="speed-val">20</span></label>
+    <button onclick="resetLoop()">Reset</button>
+
+</div>
+
    <div id = "nestloop">
         <script src="nesloop.js"></script>
     </div>
+
+<div class= "content">
+    <p>As you can see that in the above simulation, this is an example of a nested loop, and you could see in the worst case, where the number of rows = number of colums, we could say that the algorithm runs like 
+        \(O(n*n) = O(n^2) \)
+        so the time complexity is \(O(n^2)\)
+
+    </p>
+
+    <p>So in reality it would look something like this : </p>
+    <img src="D48.png" width="500">
+    <p>So as the input size increases the time taken by the algorithm to finish the task inreases quadratically, so it is more slower than \(O(n)\)</p>
+
+
+    <p>Lets talk about an algorithm whose time doesn't depend on the input size of the number of inputs!!!
+        \(O(constant)\)
+    </p>
+    <img src="D49.png" width="500">
+    <p>Imagine you have a list, and you just have to name the first element on the groceerry list, if the list has 1 element, 100 elements or \(1000000000000000000000000000000000000 = 10^{i\ don't\ know} \) eleements then would the size of the list matter, since you have to just say the first word!?
+        No right, so since the time doesn't depend on the number of inputs its a constant time complexity :D </p>
+
+        <p>There are several other time complexities which we are going to encounter  in this chapter :D</p>
+        <p>Lets look at them one by one :D</p>
+</div>
      <script>
     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');

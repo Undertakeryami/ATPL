@@ -77,3 +77,18 @@
 #sidebar-toggle.hidden {
     left: 0px;
 }
+.loop-controls {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    align-items: center;
+    font-size: 14px;
+
+}
+
+.loop-controls label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

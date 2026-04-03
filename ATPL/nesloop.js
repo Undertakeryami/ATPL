@@ -1,7 +1,7 @@
 new p5(function(p){
-    const rows =5, cols = 5;
+    let rows =5, cols = 5; // since we don't want it constant rahter than a variable
     const cell = 60, gap = 8;
-
+    const f = 67 //lol you can take any value for which you want to decrement speed lol
 
     let i = 0, j =0, timer = 0, delay = 20;
 
@@ -13,6 +13,29 @@ new p5(function(p){
         p.noStroke()
 
     };
+
+
+    window.updateRows = function(val){
+        rows= +val;
+        document.getElementById('rows-val').textContent = val;
+        i = 0; j = 0;
+        p.resizeCanvas((cell+gap)*cols - gap, (cell + gap)* rows - gap);
+    };
+
+    //similarly for updating the number of clumsns we can write as
+    window.updateCols = function(val){
+        cols = +val;
+        document.getElementById('cols-val').textContent = val;
+        i = 0; j = 0;
+        p.resizeCanvas((cell+gap)*cols - gap, (cell+gap)*rows - gap);
+    };
+
+    //for speed updation you can view it slow or fast both :D
+    window.updateSpeed = function(val){
+        delay = f - +val;
+        document.getElementById('speed-val').textContent = val;
+    };
+    window.resetLoop = function() { i = 0; j = 0; };
 
     //creating a draw function
 
@@ -32,7 +55,7 @@ new p5(function(p){
                 else if (r < i || (r === i && c < j)) p.fill(93, 202, 165); // 
                 else                         p.fill(200);           // jab woh idle rheta hai uska color
                 
-                //creating a rectangular
+                //creating a rectangular picieiceicei!
                 p.rect(x,y, cell , cell, 6);
                 //labells
 
