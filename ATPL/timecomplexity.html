@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+</head>
+
+<body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+   
+<div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <a href="index2.html">Math page :D</a>
+    <a href="binarysearch.html">Binary search</a>
+    <a href="timecomplexity.html">Time complexity :D</a>
+
+
+   </div>
+   
+
+   <div class="content">
+    <h1>Time Complexity</h1>
+    <h2>A programmers approach</h2>
+
+
+    <p>Usually when we write an algorthim or code, we usually never think too much about how much time it would take to execute, or how much the time would vary if we increase our input data size
+        but in competative proramming we really need to consider this and also in solving real life world problems
+
+    </p>
+    <h3>What do we mean by time complexity?</h3>
+    <p>Many people have this misunderstand that time complexity means how much time the algorithm would take to execute this task, or a program, but its not the case
+        time complexity doesn't measure the accruate vaue of time, but rather focuses on how the algorithm running time would increase as the input size increases.
+
+        Just imagine you have an algorithm which scans all the menu on the list given, for a single menu, it would be fast but what is we have billions of things in the menu, then the time would increase.
+    </p>
+   </div>
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+
+    
+  </script>
+</body>
+</html>

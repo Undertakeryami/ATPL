@@ -27,6 +27,8 @@
     <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
     <a href="index2.html">Math page :D</a>
     <a href="binarysearch.html">Binary search</a>
+     <a href="timecomplexity.html">Time complexity :D</a>
+
 
 
 
@@ -90,9 +92,70 @@
 <p>
   Hmm wasn't it interesting :D
   This was an interesting point of view :D
-
 </p>
-   
+
+<p>But what if we could prove Inequalitities thorugh these methods, actually we can so lets look it up 
+
+  But lets build up theory for that
+</p>
+
+\[to\ prove\ f(x) >= g(x)\]
+\[ \implies f(x)-g(x)>=0 \]
+\[let\ h(x) = f(x)-g(x)\]
+<p>If we prove that the derivative of h(x) is positve then we can say that h(x) is an increasing function</p>
+\[if\ h'(x) >=0 \]
+<p>This implies that it is an increasing functions</p>
+<img src="D44.png" width="500">
+<p>So then \( \forall x >= a \) we can say that \(h(x)>=h(a)\) 
+  See and then this means \(f(x) - g(x) >= f(a)-g(a)\) see, we proved it so easily by just one derivative
+  But what if the differentiation is negative, what that means?
+</p>
+<p>If the differentiation is negative, as you have studied in Application of derivative , if the deriative of the function is negative, which means
+  it is a decreasing function, then from where it is decreasing, lets say from x = a, then \( \forall x >= a: f(x)<=f(a)\)
+</p>
+
+<img src="D45.png" width="500">
+<p>It is the same as you can say above, so </p>
+
+\[if\ h'(x)<=0 \implies \forall x >= a : h(x)<=h(a)\]
+\[f(x)-g(x)<=f(a)-g(a)\]
+
+
+<p> But what about those \(h'(x)\) where we can't tell the differentiation result is positive or negative
+  ,hmm thats simple actually, if we can't see or just tell the difference then we could easily again assume a new function 
+  \(j(x) = h'(x)\) and then differentiate the \(j(x)\) function and see if its postive or negative 
+</p>
+
+<p>Lets take an example where we can apply this, but before that i really want to emphasise that if we are really gonna do diffrerntiate, then we need to know differentiation and intgeration basics
+  Lemme try to make a small pdf vivewer here 
+</p>
+
+<embed
+src="diff1.pdf"
+type="application/pdf"
+width="100%"
+height="600px"
+
+/>
+<p>Lemme give for integration also, so it would be sufficient here </p>
+
+<embed 
+src="int.pdf"
+type="application/pdf"
+width="100%"
+height="600px"
+
+/>
+<p>Credits</p>
+<a href="https://www.math.wustl.edu/~freiwald/131derivativetable.pdf">Differentiaino</a>
+<a href="https://www.mathportal.org/formulas/integration_formulas.pdf">Integration</a>
+</div>
+
+
+<div class="content">
+  <h3>The game here</h3>
+  <p>Since we are familiriesed with the basic idea of how to approach these inequalties though method of differentaition and integration we can move onto solving some problems</p>
+
 </div>
      <script>
     function toggleSidebar() {
