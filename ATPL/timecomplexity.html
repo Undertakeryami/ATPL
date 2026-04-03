@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
     onload="renderMathInElement(document.body);"></script>
@@ -42,13 +44,28 @@
         but in competative proramming we really need to consider this and also in solving real life world problems
 
     </p>
+    <img src="D46.png" width="500">
     <h3>What do we mean by time complexity?</h3>
     <p>Many people have this misunderstand that time complexity means how much time the algorithm would take to execute this task, or a program, but its not the case
         time complexity doesn't measure the accruate vaue of time, but rather focuses on how the algorithm running time would increase as the input size increases.
 
         Just imagine you have an algorithm which scans all the menu on the list given, for a single menu, it would be fast but what is we have billions of things in the menu, then the time would increase.
+        this is what time complexity tellssss
     </p>
+    <img src="D47.png" width="500">
+    <p>This is the illustration of the above example, as the time taken increases, as the number of inputs increase linearly, hence the time complexity for going through all dishes in the menu is
+        \(O(n)\) where n is the number of inputs we have given in the algorithm </p>
+
+        <h2>The general Idea??</h2>
+        <p>Okay aniket, i am begining to understand this but could you guide me, like i get the gist of it, but can i find it for everything</p>
+        <p>Aniket: Hmm yup, you could see basic algorithm, and try to find the time complexxit on your own</p>
+
+        <h3>Nested Loop</h3>
+        <p>A nested loop is just a loop inside loop :D, you would be better understand when you see it lol</p>
    </div>
+   <div id = "nestloop">
+        <script src="nesloop.js"></script>
+    </div>
      <script>
     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');
