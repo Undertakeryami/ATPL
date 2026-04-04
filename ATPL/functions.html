@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+</head>
+
+<body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+   
+<div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <a href="index2.html">Math page :D</a>
+    <a href="binarysearch.html">Binary search</a>
+    <a href="timecomplexity.html">Time complexity :D</a>
+    <a href="functions.html">Functions!!</a>
+   </div>
+
+
+   <div class="content">
+
+    <h1>Functions!</h1>
+    <p>This page would be dedicated to cute explanation of functions </p>
+    <h3>What are functions?</h3>
+
+    <p>Many people go with the notion of considering functions as like a machine, on which you give some inputs it provides you with an output? right?
+        but this defintion is like half baked, or it won't help you solve much problems which we would be going to look in this article
+    </p>
+    <p>Relations, are something like how you are related to that one girl you met in the metro</p>
+
+    <p>Lets consider two sets A and B and say that \(f:A\ ->B\) a function is defined from A to 
+        then we could say one thing about the function that it is the subset of the cartesian product of \(A\ and\ B\)
+
+
+    </p>
+
+    \[let\ A\ be\ {1,2,3}\ and\ B\ be\ {1,2}\ then\ \]
+   \[ A \times B = \{(x, y) : \forall x \in A,\ \forall y \in B\} \]
+
+<p>Now since you have got a hold of what cartesian product is, then remeber that function is a special relation which is defined on this cartesian product!</p>
+    <h3>Culling games!, the rules!</h3>
+    <p>The player is requested to click this button to enjoy the full experience of this page!</p>
+
+
+    <audio id="delirious" src="deli.mp3"></audio> 
+    <button onclick="toggleMusic()">Play theme</button>
+
+    <script>
+        const song = document.getElementById("delirious");
+//saw from youtube how to add songs in an html page :D
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+
+
+        }
+    </script>
+
+
+<h4>Lets start!</h4>
+<p>There are some rules to declare or call a relaion a function, as the narrator speaks,
+    The rules are as follow: </p>
+    <p>Rule 1.Existence of the image, if the function is defined as \(f:A -> B\)  then \(\forall x \in A\ \exist\  y\ such\ that\ (x,y) \in f\)
+    Means for every element in x there must exist a image or its mapping to the codomain set B    </p>
+<p>Rule 2.
+    For every input there must be a unique output or an image, this means that no input can have two distinct images!
+    formally speaking if \((x1,y1) \in f\ and\ (x1,y2) \in f\ \implies\ y1=y2\ to\ be\ a\ function\ \)
+
+</p>
+<p>So as the player have gathered all the rules now its time to move onto some good problems and theory!</p>
+<p>is \(f:R->R : f(x) = x^2 \) is a function?
+    , the answer is pretty easy it is a function since, here we can say that, for every x in real number there exist its square and also if \(x1^2 = y1\ and\ x1^2 = y2\ then\  y1 = y2\)
+    hence we proved that it is a function
+</p>
+
+<p>Is\(f:R->R : f(x) = \sqrt{x}\) is a function? assuming the root defintino to be as usual?
+    You might want to ask yourself that is it a function, if yes then why and is it defined for all x in real numbers and how itadori father made kenjaku cry in bed.
+</p>
+
+
+</div>
+   
+
+   
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+
+    
+  </script>
+</body>
+</html>

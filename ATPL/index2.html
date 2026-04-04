@@ -14,7 +14,24 @@
 
 <body>
      <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+  <audio id="delirious" src="deli.mp3"></audio>
+    <button onclick="toggleMusic()">Play theme</button>
 
+    <script>
+        const song = document.getElementById("delirious");
+
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+        }
+    </script>
    
 <div class = "sidebar">
     <h3>Pages to wonder</h3>
@@ -28,6 +45,7 @@
     <a href="index2.html">Math page :D</a>
     <a href="binarysearch.html">Binary search</a>
      <a href="timecomplexity.html">Time complexity :D</a>
+     <a href="functions.html">Functions!!</a>
 
 
 
@@ -155,6 +173,23 @@ height="600px"
 <div class="content">
   <h3>The game here</h3>
   <p>Since we are familiriesed with the basic idea of how to approach these inequalties though method of differentaition and integration we can move onto solving some problems</p>
+<p>The content was pretty cool up there, but today we would learn a new method of proving an inequality which would be way more cooler :D
+  Lets try to prove some inequalities by the above idea which i gave you 
+
+</p>
+
+\[prove\ that\ \forall x \in (0,\frac{\pi}{2})\ x>=sin(x)\]
+<p>Although this may seem a bit off intutive but its an easy proof</p>
+\[let\ f(x) = x-sin(x) \]
+\[\implies f'(x) = 1 - cos(x) >= 0 \forall x in (0, \frac{\pi}{2})\]
+\[\implies \forall x>=0:f(x)-f(0)>=0\]
+\[\implies x-sin(x) >= 0-sin(0)\]
+\[\implies x>sin(x)\]
+
+
+
+
+<p>You can prove several inequlaities basis on this :D</p>
 
 </div>
      <script>

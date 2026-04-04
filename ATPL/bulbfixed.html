@@ -11,6 +11,24 @@
 </head>
 
 <body>
+      <audio id="delirious" src="deli.mp3"></audio>
+    <button onclick="toggleMusic()">Play theme</button>
+
+    <script>
+        const song = document.getElementById("delirious");
+
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+        }
+    </script>
  <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
     <h1> A light bulb</h1>
     <p>A light bulb as you have seen in your home is a device that works on the principle of energy</p>
@@ -40,8 +58,10 @@
     <a href="index2.html">Math page :D</a>
     <a href="binarysearch.html">Binary search</a>
      <a href="timecomplexity.html">Time complexity :D</a>
+     <a href="functions.html">Functions!!</a>
 
 
+     
 </div>
 <div class = "explanation">
     <p>This is a randomly moving electron, now imagine its in the whole conductor i shown you above wouldn't it be chaotic</p>

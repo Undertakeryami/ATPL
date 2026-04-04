@@ -17,7 +17,24 @@
 <body>
      <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
 
-   
+     <audio id="delirious" src="deli.mp3"></audio>
+    <button onclick="toggleMusic()">Play theme</button>
+
+    <script>
+        const song = document.getElementById("delirious");
+
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+        }
+    </script>
 <div class = "sidebar">
     <h3>Pages to wonder</h3>
     <a href="index.html">The Main game</a>
@@ -30,6 +47,7 @@
     <a href="index2.html">Math page :D</a>
     <a href="binarysearch.html">Binary search</a>
     <a href="timecomplexity.html">Time complexity :D</a>
+    <a href="functions.html">Functions!!</a>
 
 
    </div>
