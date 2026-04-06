@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+</head>
+
+<body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+     <audio id="delirious" src="deli.mp3"></audio>
+    <button onclick="toggleMusic()">Play theme</button>
+
+    <script>
+        const song = document.getElementById("delirious");
+
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+        }
+    </script>
+<div class = "sidebar">
+    <h3>Pages to wonder</h3>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <a href="index2.html">Math page :D</a>
+    <a href="binarysearch.html">Binary search</a>
+    <a href="timecomplexity.html">Time complexity :D</a>
+    <a href="functions.html">Functions!!</a>
+</div>
+
+<div class="content">
+    <h1>Conductors</h1>
+    <h3>What are conductors?</h3>
+
+    <p>conductors are the material with free electrons in it which promotes the passing of electricity!</p>
+    <p>Does that means, when i touch metal sometimes, why do i feel the shock!
+        All of these questions might be answered when we would study conductors, and its properties!!!
+    </p>
+
+    <h3>An Ideal conductor?</h3>
+
+    <p>Imagine your are riding your bicycle and the road is free, like no cars nothing no pebble even on the road, so it is a smooth ride for you, thats how it is for the conductors inside.
+        For a conductor, 
+    </p>
+</div>
+
+
+
+  
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+
+    
+  </script>
+</body>
+</html>
