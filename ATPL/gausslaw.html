@@ -82,6 +82,7 @@
 <div id="areavecanim">
     <script src="areavec.js"></script>
 </div>
+<div class="content">
 <p>So as you can see here its is the direction of the area vector, which is perpendicular to the surface, and now whats cool is that, we can now define the flux!</p>
 
 <h4>Flux continued</h4>
@@ -98,17 +99,79 @@ src="dp.pdf"
 type="application/pdf"
 width="100%"
 height="600px"
-
 />
 
 
-<p>I hope you got a gist of it, but i really want you to know, that styduing flux is so cool!!</p>
+<p>I hope you got a gist of it, but i really want you to know, that styduing flux is so cool!
+</p>
+
+<h3>Talking about Flux</h3>
+<p>Since we have defined flux to be \(\iint \vec{E} \cdot \vec{da}\) and then it means calculating the integral for the whole surface, 
+    now why do we need this?? idk??
+    since iwe have a beautiful symmetry argument for the flux
+</p>
+
+<h4>an example of the sphere</h4>
+<p>Lets say we have a spehere where there is a charge inside it</p>
+
+</div>
+<div id="sphereflux">
+    <script src="solidflux.js"></script>
+</div>
+<div class="content">
+    <p>So as you can see, if we see the electric field line originating from here, we could see tht,
+        hmm, so since the field is radially outwards, so for every part of it is perpendicular to the surface so the total flux is 
+\(4 \pi r^2 * E\)
+Since, you liked it i want you to caclutae the flux thorugh a point charge inside a cube!
+you would be suprised :D </p>
+<img src="D57.png" width="500">
+
+<p>Since you are now little complicated </p>
+<p>Let us imagine a disc with a charge q palced just a distance x from it and the radius R so now, what we can say find the flux thorugh the speherical disk and then due to the charge</p>
+<p>Usually this is a tough case, but i hope you can do it easily :D, just take somoe elements and integrate it :D</p>
+<div id="circlesheet">
+
+    <script src="csheet.js"></script>
+</div>
+
+<div class="content">
+    <h3>Gauss Law !</h3>
+    <p>Hurray so we are finally at the gauss law, but hey, shouldn't you give more questions on the flux topic??
+        I yes so, so here are some freshly made questions you can practice on the flux topic :D
+
+
+    </p>
+
+    <div class = "pset">
+        <h4>Problem 1</h4>
+        <p>Imagine you have a hollow hemi-sphere of Radius \(R\), and a center of charge \(q\) at the center, now your task is to find the flux due to the charge throguht the hemisphere </p>
+        <h4>Problem 2</h4>
+        <p>Imagine you have a closed cylinder, whose both sides are closed, and its height is \(H\) and the raduius is \(R\), now a small charge q is placed at H/2 from its one end, now find the flux through the curved surface area of the cylinder</p>
+        <h4>Extension of problem 2</h4>
+        <p>Now the charge is placed x distance from cylinder's one end, now find the flux thorught the curved surface area of the cube</p>
+
+    </div>
+<div class = "content">
+    <h2>Gauss law finally!</h2>
+    <p>so here we are at the gauss law which we have been waiting for, but before that remeber that gauss law is only applicable for Symmetric closed surfaces</p>
+    <p>So the gauss law states that , if there is a \(closed\ surface\ S \) then the total net flux thorrugh the surface due the the chrages inside would be
+        \(\frac{qec}{e} \) where \(qec \) is the total charge present "inside" the surface
+    </p>
+
+    <h1>The thing is </h1>
+    <p>This is applicable for any weird closed surface brother!!!</p>
+    
+</div>
+</div>
+</div>
      <script>
     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');
       const btn = document.getElementById('sidebar-toggle');
       sidebar.classList.toggle('hidden');
       btn.classList.toggle('hidden');
+
+      
       btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
     }
 
