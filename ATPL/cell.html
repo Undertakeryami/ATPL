@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Page</title>
- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 </head>
 
 <body>
-      <audio id="delirious" src="deli.mp3"></audio>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+     <audio id="delirious" src="deli.mp3"></audio>
     <button onclick="toggleMusic()">Play theme</button>
 
     <script>
@@ -29,8 +35,7 @@
             }
         }
     </script>
-    <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
-   <div class = "sidebar">
+<div class = "sidebar">
     <div class="sidebar-title">Pages to wonder!</div>
     <div class="sidebar-search"> <!--saw this in a video and coded hehe -->
         <input type="text" id="sidebar-search-input" placeholder="search pages..." oninput="filterSidebar(this.value)" />
@@ -68,43 +73,20 @@ document.querySelectorAll('.sidebar a').forEach(link => {
   if (link.href === window.location.href) link.classList.add('active');
 });
 </script>
-    <div class="content">
-        <h1>Rolling of a Cart?</h1>
-        <p>Have you pondered about thinking how does a cart moves or how does a bicycle or even a simple wheel moves?</p>
-        <p> You may br thinking its because, we are applying some force and due to second law of motion a wheel moves
-            But its half of the truth, and the reality would suprise you :D
-        </p>
-        <img src="D12.png" alt="gay" width="500">
-        <p>Usually when we apply force to a rigid body, there is 2 types of motion possible.
-            The first one is translatory one and the other is rotational one.
-            So imagine the surface is pure smooth, like you are walking on ice, have you noticed its so hard to walk on ice, compared to concerete
-            We would discover in this article.
-        </p>
 
-        <div id = "cartanim">
-            <script src = "cartanim.js"></script>
-        </div>
-        
-    </div>
-    <div class = "content">
-        <h3>Translaotry motion</h3>
-        <p>As you can see here this is an example of translatory motion as the center of mass moves so does all the partcle moves and have the same 
-            velocity and acceleration as the center of mass, due to no rotation and rigid body dynamics (the distance between any two points on the body is constant)
-        </p>
-        <p>But what if we make it rotate too, then the points would have different velocity at different points</p>
-    </div>
+<div class="content">
+    <h1>Cells! wait Gavlanic Celss!!!</h1>
 
-    <div class = "content">
-        <div id = "cartrollanim">
-            <script src ="cartrollanim.js"></script>
-        </div>
-        <h3>This is the rolling motion</h3>
-        <p>This is the rotatory + translatory motion that we wanted to talk, the same motion that you see, in your wheels of bicycle, carts and more</p>
-    </div>
+    <p>This page would be dedicated to cute explanations of galvanic also known as Electrochemical cells!
+        So what are electrochemical cells????
 
-    <p>So do you know, the friction which we think is very bad, since it tear our clother, and make loose energy in various place, is the only reason the cart wheel is able 
-        to move or you are able to walk, becuase, the friction applies its own torque to rotate the body
     </p>
+
+    <h3>Electrochemical cells</h3>
+    <p>Electrochemical cells are those cells which uses chemical energy and convert it into electectrical energy !!!!!!</p>
+    <p>Lets make a animation so you can understand :D</p>
+
+</div>
 
      <script>
     function toggleSidebar() {
@@ -112,7 +94,12 @@ document.querySelectorAll('.sidebar a').forEach(link => {
       const btn = document.getElementById('sidebar-toggle');
       sidebar.classList.toggle('hidden');
       btn.classList.toggle('hidden');
+
+      
       btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
     }
+
+    
   </script>
 </body>
+</html>

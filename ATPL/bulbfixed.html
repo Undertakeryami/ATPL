@@ -47,22 +47,43 @@
         <script src="bulbanimation.js"></script>
     </div>
 <div class = "sidebar">
-    <h3>Pages to wonder</h3>
-    <a href="index.html">The Main game </a>
+    <div class="sidebar-title">Pages to wonder!</div>
+    <div class="sidebar-search"> <!--saw this in a video and coded hehe -->
+        <input type="text" id="sidebar-search-input" placeholder="search pages..." oninput="filterSidebar(this.value)" />
+    </div>
+    <div class="sidebar-section">physics</div>
+    <a href="index.html">The Main game</a>
     <a href="bulbfixed.html">How does a lightbulb light</a>
     <a href="pressurecooker.html">Pressure cooooooker</a>
     <a href="cartroll.html">CartRoll</a>
     <a href="microwave.html">Microwave</a>
     <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="conductors.html">Conductors</a>
+    <a href="cell.html">Wait what is a cell!!</a>
     <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <div class="sidebar-section">Mathematics</div>
     <a href="index2.html">Math page :D</a>
+    <a href="functions.html">Functions yaya!</a>
     <a href="binarysearch.html">Binary search</a>
      <a href="timecomplexity.html">Time complexity :D</a>
-     <a href="functions.html">Functions!!</a>
-
-
      
+      
+
+
 </div>
+<script>
+    function filterSidebar(query) {
+  const links = document.querySelectorAll('.sidebar a');
+  links.forEach(link => {
+    link.style.display = link.textContent.toLowerCase().includes(query.toLowerCase()) ? 'flex' : 'none';
+  });
+}
+
+/*for highlighting the current page, and i used ai for this */
+document.querySelectorAll('.sidebar a').forEach(link => {
+  if (link.href === window.location.href) link.classList.add('active');
+});
+</script>
 <div class = "explanation">
     <p>This is a randomly moving electron, now imagine its in the whole conductor i shown you above wouldn't it be chaotic</p>
     <p>
