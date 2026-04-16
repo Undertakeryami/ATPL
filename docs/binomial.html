@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+</head>
+
+<body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+     <audio id="delirious" src="deli.mp3"></audio>
+    <button onclick="toggleMusic()">Play theme</button>
+
+    <script>
+        const song = document.getElementById("delirious");
+
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+        }
+    </script>
+<div class = "sidebar">
+    <div class="sidebar-title">Pages to wonder!</div>
+    <div class="sidebar-search"> <!--saw this in a video and coded hehe -->
+        <input type="text" id="sidebar-search-input" placeholder="search pages..." oninput="filterSidebar(this.value)" />
+    </div>
+    <div class="sidebar-section">physics</div>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="conductors.html">Conductors</a>
+    <a href="cell.html">Wait what is a cell!!</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <div class="sidebar-section">Mathematics</div>
+    <a href="index2.html">Math page :D</a>
+    <a href="functions.html">Functions yaya!</a>
+    <a href="binarysearch.html">Binary search</a>
+     <a href="timecomplexity.html">Time complexity :D</a>
+     
+      
+
+
+</div>
+<script>
+    function filterSidebar(query) {
+  const links = document.querySelectorAll('.sidebar a');
+  links.forEach(link => {
+    link.style.display = link.textContent.toLowerCase().includes(query.toLowerCase()) ? 'flex' : 'none';
+  });
+}
+
+/*for highlighting the current page, and i used ai for this */
+document.querySelectorAll('.sidebar a').forEach(link => {
+  if (link.href === window.location.href) link.classList.add('active');
+});
+</script>
+
+<div class = "content">
+    <h1>Binomial Theorem, More like cool stuff</h1>
+    <h3>Binomial theorem and its application!</h3>
+
+    <p>This page would be dedicated to explaining binomial theorem and its application where we would see some of the you know combinatorics too.</p>
+
+    \[start!\]
+
+    <p>Usually when we think about binomial theorem, we think of??/ idk, cause i haven't it now lol</p>
+
+    <h3>The theory!</h3>
+    <p>Imagine you have a set, and then </p>
+    \[S = [1,2,3,4] \]
+
+    <p>My question is that, in how many ways we can arrange this sequence, like in how many ways we can permutate this?</p>
+    <p>The answer is pretty silly hehe</p>
+ ___ ____ ____ ____ 
+
+ <p>Imagine you have like four blanks, in which you want to fill the numbers, but like you have this set \([1,2,3,4]\)
+    so in the first box we have 4 choices to select, like we can take any number from this set and put here in the blank 1, then we have the set (let us imagine out of 4 optinos we picked 3), then we  have the remaining set as  \([1, 2, 4]\), and then what we can say is that???
+we have now 3 options left, but now whtat we can do is something cool, now out of these 3 we have to select one which has 3 ways, so its like something like this</p>
+<img src="D62.png" width="600">
+
+<p>hence we have total of 12 ways of arranging this sequence, !!</p>
+<p>Now lemme generalise this result!, it was just a introduction but you are supposed to prove all the results by yourself, cause i wanna move to binomial lol</p>
+<h3>Some general results and notations i am gonna use!</h3>
+
+    \[{n \choose k} = \frac{n!}{(n-k)!*k!}  \]
+    <p>This means like choosing k objects out of n objects!</p>
+
+
+<h4>Binomail theorem formalism</h4>
+<p>We have a binomial thereom proof and a good formalism, we can see to understand it more beuaitfully</p>
+<p>Lets see \((a+b)^{0} \) and hmm this could be seen as a binary tree with 0 level, just like a point, but the main thing comes next, now lest imagine 
+    \((a+b)^1 \), hmm here lets imagine a binary tree with rules, if we go to lest we write a, and right we go we write b.
+</p>
+
+<img src="D63.png" width="500">
+<p>what about when we have something like \((a+b)^2 \) , hm then we imagine a binary tree with 2 levels, following the same rule.</p>
+<img src="D64.png" width="500">
+<p>now i guess you got the 3 one, but lemme draw, </p>
+<img src="D65.png" width="500">
+<p>since you have now got a hang of it, could you see the coefieicnt of term are like 
+    imagine this if you have \((a+b)^n \) then the coeffience of \(a^m \cdot b^k\)
+ would be something like \({n \choose k}\) or \({n \choose m}\) since the degree is n lol</p>
+
+
+ <p>Yeah so we noticed one property, but i want you to prove this with a combinatoral argument, that
+ \( {n \choose k} = {n \choose n-k} \)
+ proving this is very easy, but i really want you to try with a 2 proof, one algebriacally and one combinatorially
+ </p>
+
+ <h3>Some binomial property and proving problems!</h3>
+ <p>I want you to prove every result i am writing here!</p>
+ \[(x+y)^n = {n \choose 0}x^0 y^n + {n \choose 1}x^1 y^{n-1} +...+ {n \choose n}x^n  y^0 \]
+ \[ {n \choose k}+{n \choose k-1}= {n+1 \choose k} \]
+
+ \[ {n \choose 0} + {n \choose 1} + {n \choose 2} +...+ {n \choose n} = 2^n     \]
+</div>
+
+<div class = "content">
+    <h3>Several methods to solve binomial problems</h3>
+</div>
+
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+
+      
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+
+    
+  </script>
+</body>
+</html>
