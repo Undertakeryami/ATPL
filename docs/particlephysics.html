@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+</head>
+
+<body>
+     <button id="sidebar-toggle" onclick="toggleSidebar()">&#8249; hide</button>
+
+   
+<div class = "sidebar">
+    <div class="sidebar-title">Pages to wonder!</div>
+    <div class="sidebar-search"> <!--saw this in a video and coded hehe -->
+        <input type="text" id="sidebar-search-input" placeholder="search pages..." oninput="filterSidebar(this.value)" />
+    </div>
+    <div class="sidebar-section">physics</div>
+    <a href="index.html">The Main game</a>
+    <a href="bulbfixed.html">How does a lightbulb light</a>
+    <a href="pressurecooker.html">Pressure cooooooker</a>
+    <a href="cartroll.html">CartRoll</a>
+    <a href="microwave.html">Microwave</a>
+    <a href = "Current.html">Solving Tough Circuits problem</a>
+    <a href="conductors.html">Conductors</a>
+    <a href="cell.html">Wait what is a cell!!</a>
+    <a href="osmodia.html">Why do hospital charge for water and glucose so much</a>
+    <div class="sidebar-section">Mathematics</div>
+    <a href="index2.html">Math page :D</a>
+    <a href="functions.html">Functions yaya!</a>
+    <a href="binarysearch.html">Binary search</a>
+     <a href="timecomplexity.html">Time complexity :D</a>
+     
+      
+
+
+</div>
+<script>
+    function filterSidebar(query) {
+  const links = document.querySelectorAll('.sidebar a');
+  links.forEach(link => {
+    link.style.display = link.textContent.toLowerCase().includes(query.toLowerCase()) ? 'flex' : 'none';
+  });
+}
+
+/*for highlighting the current page, and i used ai for this */
+document.querySelectorAll('.sidebar a').forEach(link => {
+  if (link.href === window.location.href) link.classList.add('active');
+});
+</script>
+
+<div class="content">
+    <p>Lock in chat</p>
+</div>
+    <audio id="delirious" src="deli.mp3"></audio> 
+    <button onclick="toggleMusic()">Play theme</button>
+
+    <script>
+        const song = document.getElementById("delirious");
+//saw from youtube how to add songs in an html page :D
+        function toggleMusic(){
+            if (song.paused){
+                song.play();
+                document.querySelector("button").textContent = "Stop";
+
+            }
+            else{
+                song.pause();
+      document.querySelector("button").textContent = "Lock in";
+            }
+
+
+        }
+    </script>
+
+
+
+   <div class = "content">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <h1>Particle Physics a friendly introduction!</h1>
+    <p>It is from the childhood we know that world is made up of atoms, and atoms are the fundamental particle which can't be sepreated out and makes everyhing in the world!
+        Hmm, you may sound that ture at some points, but its actually not!, wait really??
+        Yes the fact is there are other smaller particles as well as which the world is made up of! and yet we are discovering so much :D.
+
+    </p>
+    <h2>Introduction!</h2>
+    <p>It is good to look at the history of all the models, when After the Cathode ray experiment, which proved that there are some particles with very smaller mass, but they have negative charge, 
+        existed in this world, then many scientist started giving proposals for their model of atoms, and started discovery of it.
+        
+        JJ Thmopshon, thought that a atom is pudding like structure where the negative charges are like like the fruits in the pudding and the positive charges are like the pudding creame itslef, hence the pudding model was developed
+
+    </p>
+    <p>But soon in 1911, Rutherford came with an experiment, where he showed that when he bombarded a thin gold foil with Helium particle (+2) aplha rays, the results were interesting, rather than interesting they were suprising 
+        He saw that majorlity of the alpha rays were gone straight through, and some deviated with positive angles, (which means there is something in the center small compared to the size of the atom, but its positive as it is deflecting the alpha (postive) rays), and also 1 in 10000 particles got reflected back at 180 degrees, which was also a huge finding, which confirms something heavy at the center of the nucleus resides.
+        After this experiment, several models of atom came to existence, and hence now we are using the model which we love, which is Quantum orbital model
+    </p>
+   </div>galvanic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const btn = document.getElementById('sidebar-toggle');
+      sidebar.classList.toggle('hidden');
+      btn.classList.toggle('hidden');
+      btn.textContent = sidebar.classList.contains('hidden') ? 'Show the bar bro' : 'Hide the bar';
+    }
+
+    
+  </script>
+</body>
+</html>
